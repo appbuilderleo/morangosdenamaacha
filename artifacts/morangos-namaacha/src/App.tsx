@@ -74,7 +74,6 @@ function SiteHeader() {
     <header className="site-header">
       <a className="brand" href="#inicio" aria-label="Morangos de Namaacha, início">
         <img src={logo} alt="Morangos de Namaacha" />
-        <span className="brand-label">Namaacha<br />Moçambique</span>
       </a>
       <nav className="nav-links" aria-label="Navegação principal">
         <a href="#origem">A origem</a>
