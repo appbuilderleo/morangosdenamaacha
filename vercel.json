@@ -1,0 +1,5 @@
+{
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "BASE_PATH=/ PORT=4173 pnpm --filter @workspace/morangos-namaacha run build",
+  "outputDirectory": "artifacts/morangos-namaacha/dist/public"
+}

@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Morangos de Namaacha"
+description = "Landing page premium para apresentar os frutos orgânicos da época de Namaacha, contar a origem da marca e gerar contactos de distribuição."
+version = "1.0.0"
+id = "artifacts/morangos-namaacha"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24773
+
+[services.development]
+run = "pnpm --filter @workspace/morangos-namaacha run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/morangos-namaacha", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/morangos-namaacha/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24773"
+BASE_PATH = "/"
